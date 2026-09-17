@@ -75,6 +75,7 @@ Practice technical interview questions related to your identified skill gaps.
 
 # ☁️ AWS Architecture
 
+![CareerPilot AWS Architecture](./public/careerpilot-architecture.png)
 ```text
                     ┌─────────────────────┐
                     │   CareerPilot UI    │
