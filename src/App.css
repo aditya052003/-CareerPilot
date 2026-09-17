@@ -1,0 +1,846 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(
+    135deg,
+    #dbeafe 0%,
+    #eff6ff 45%,
+    #ffffff 100%
+  );
+}
+
+.hero-content {
+  max-width: 850px;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 30px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  color: #0f172a;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.hero-button {
+  margin-top: 32px;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.hero-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ANALYZER SECTION
+========================= */
+
+.analyzer {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  color: #0f172a;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.section-title p {
+  color: #475569;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* =========================
+   ANALYZER CARD
+========================= */
+
+.analyzer-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 42px;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.input-section {
+  margin-bottom: 32px;
+}
+
+.input-section label {
+  display: block;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box {
+  border: 2px dashed #64748b;
+  border-radius: 14px;
+  padding: 38px;
+  text-align: center;
+  background: #ffffff;
+  transition: 0.2s;
+}
+
+.upload-box:hover {
+  border-color: #2563eb;
+  background: #f8fbff;
+}
+
+.upload-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.upload-box h3 {
+  color: #111827;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.upload-box p {
+  color: #475569;
+  margin: 10px 0 20px;
+}
+
+.upload-box input {
+  color: #334155;
+  font-size: 14px;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+  width: 100%;
+  min-height: 210px;
+  padding: 18px;
+  border: 1px solid #94a3b8;
+  border-radius: 12px;
+  resize: vertical;
+  font-size: 15px;
+  font-family: inherit;
+  color: #111827;
+  background: #ffffff;
+}
+
+textarea::placeholder {
+  color: #64748b;
+}
+
+textarea:focus {
+  outline: 2px solid #2563eb;
+  border-color: #2563eb;
+}
+
+/* =========================
+   ANALYZE BUTTON
+========================= */
+
+.analyze-button {
+  width: 100%;
+  padding: 17px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.analyze-button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   RESULTS SECTION
+========================= */
+
+.results-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.results-section > h2 {
+  text-align: center;
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   SCORE
+========================= */
+
+.score-card {
+  text-align: center;
+  padding: 35px;
+  margin-bottom: 28px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 18px;
+}
+
+.score-card h3 {
+  color: #1e293b;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.score {
+  color: #2563eb;
+  font-size: 64px;
+  font-weight: 800;
+}
+
+/* =========================
+   MATCHED / MISSING SKILLS
+========================= */
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.result-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.result-card h3 {
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.result-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result-card li {
+  color: #1f2937;
+  padding: 12px 15px;
+  margin-bottom: 9px;
+  background: #f8fafc;
+  border-radius: 9px;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+}
+
+.result-card p {
+  color: #475569;
+}
+
+/* =========================
+   ROADMAP
+========================= */
+
+.roadmap-card {
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.roadmap-card h3 {
+  color: #111827;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.roadmap-card ol {
+  padding-left: 28px;
+}
+
+.roadmap-card li {
+  color: #1f2937;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how {
+  padding: 90px 20px;
+  background: #f1f5f9;
+}
+
+.how .section-title h2 {
+  color: #0f172a;
+}
+
+.steps {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.step-number {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  color: #111827;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 45px 20px;
+  text-align: center;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+footer .logo {
+  color: #ffffff;
+}
+
+footer p {
+  margin-top: 12px;
+  color: #cbd5e1;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: 500px;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .analyzer-card {
+    padding: 25px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .score {
+    font-size: 50px;
+  }
+}
+/* =========================
+   ROADMAP ITEMS
+========================= */
+
+.roadmap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.roadmap-item {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  background: #f8fafc;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+}
+
+.roadmap-number {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-weight: 800;
+}
+
+.roadmap-content {
+  flex: 1;
+}
+
+.roadmap-content h4 {
+  color: #111827;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.roadmap-content p {
+  color: #334155;
+  margin: 7px 0;
+  line-height: 1.5;
+}
+
+.roadmap-content strong {
+  color: #111827;
+}
+
+/* Readiness Score spacing */
+
+.score-card h3 {
+  margin-bottom: 24px;
+}
+
+.score-card .score {
+  margin-bottom: 24px;
+}
+
+.score-card p {
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+/* Readiness Score Progress Bar */
+
+.score-bar {
+  width: 80%;
+  height: 14px;
+  margin: 0 auto 24px auto;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+  width: 0;
+  background: #2563eb;
+  border-radius: 20px;
+  transition: width 1s ease-in-out;
+}
+
+/* ========================================
+   INTERVIEW PREPARATION
+======================================== */
+
+.interview-section {
+  margin-top: 32px;
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe3ef;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+/* Header */
+
+.interview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+
+.interview-header h3 {
+  margin: 0 0 8px 0;
+
+  color: #111827;
+
+  font-size: 25px;
+}
+
+
+.interview-subtitle {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* Question count */
+
+.interview-badge {
+  padding: 9px 16px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 999px;
+
+  color: #2563eb;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* Question list */
+
+.interview-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* Question card */
+
+.interview-card {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.interview-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #bfdbfe;
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Question number */
+
+.interview-number {
+  min-width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+
+/* Question content */
+
+.interview-question {
+  flex: 1;
+}
+
+
+.question-top {
+  margin-bottom: 8px;
+}
+
+
+.question-label {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  background: #eef2ff;
+
+  border-radius: 6px;
+
+  color: #4f46e5;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+.interview-question h4 {
+  margin: 8px 0 14px 0;
+
+  color: #111827;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+}
+
+
+/* Interview tip */
+
+.interview-tip {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  padding: 12px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+}
+
+
+.interview-tip span {
+  font-size: 16px;
+}
+
+
+.interview-tip p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .interview-section {
+    padding: 20px;
+  }
+
+  .interview-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .interview-card {
+    gap: 14px;
+
+    padding: 16px;
+  }
+
+  .interview-number {
+    min-width: 40px;
+
+    height: 40px;
+
+    font-size: 13px;
+  }
+
+  .interview-question h4 {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .result-card ul {
+    grid-template-columns: 1fr;
+  }
+}
