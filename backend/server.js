@@ -22,9 +22,8 @@ app.use(cors());
 app.use(express.json());
 
 
-// ===============================
 // AWS S3 CONFIGURATION
-// ===============================
+
 
 const s3 = new S3Client({
   region: "ap-south-1"
@@ -40,9 +39,9 @@ const dynamoDB = DynamoDBDocumentClient.from(dynamoClient);
 
 const TABLE_NAME = "CareerPilotAnalyses";
 
-// ===============================
+
 // MULTER CONFIGURATION
-// ===============================
+
 
 // Store uploaded PDF temporarily in memory
 const upload = multer({
@@ -50,9 +49,9 @@ const upload = multer({
 });
 
 
-// ===============================
+
 // TEST API
-// ===============================
+
 
 app.get("/", (req, res) => {
   res.json({
@@ -61,9 +60,9 @@ app.get("/", (req, res) => {
 });
 
 
-// ===============================
+
 // ANALYZE RESUME API
-// ===============================
+
 
 app.post(
   "/api/analyze",
@@ -80,7 +79,7 @@ app.post(
       }
 
 
-      // Check job description
+      
       const jobDescription = req.body.jobDescription;
 
       if (!jobDescription) {
@@ -90,9 +89,9 @@ app.post(
       }
 
 
-      // ===============================
+      
       // UPLOAD RESUME TO AMAZON S3
-      // ===============================
+      
 
       const fileName =
         `${Date.now()}-${req.file.originalname}`;
@@ -113,9 +112,9 @@ app.post(
       );
 
 
-      // ===============================
+      
       // READ RESUME PDF
-      // ===============================
+      
 
       const pdfData = await pdfParse(req.file.buffer);
 
@@ -123,17 +122,17 @@ app.post(
         pdfData.text.toLowerCase();
 
 
-      // ===============================
+      
       // JOB DESCRIPTION
-      // ===============================
+      
 
       const jdText =
         jobDescription.toLowerCase();
 
 
-      // ===============================
+      
       // SKILLS WE WANT TO CHECK
-      // ===============================
+      
 
       const skills = [
         "javascript",
@@ -155,27 +154,27 @@ app.post(
       ];
 
 
-      // ===============================
+      
       // FIND SKILLS IN RESUME
-      // ===============================
+      
 
       const resumeSkills = skills.filter(skill =>
         resumeText.includes(skill)
       );
 
 
-      // ===============================
+      
       // FIND REQUIRED SKILLS
-      // ===============================
+      
 
       const requiredSkills = skills.filter(skill =>
         jdText.includes(skill)
       );
 
 
-      // ===============================
+      
       // MATCHED AND MISSING SKILLS
-      // ===============================
+      
 
       const matchedSkills = requiredSkills.filter(skill =>
         resumeSkills.includes(skill)
@@ -186,9 +185,9 @@ app.post(
       );
 
 
-      // ===============================
+      
       // CALCULATE MATCH SCORE
-      // ===============================
+      
 
       let score = 0;
 
@@ -201,9 +200,9 @@ app.post(
       }
 
 
-      // ===============================
+      
       // PERSONALIZED ROADMAP
-      // ===============================
+      
 
       const roadmap = missingSkills.map(skill => {
 
@@ -289,9 +288,9 @@ app.post(
       });
 
 
-      // ===============================
+      
       // INTERVIEW QUESTIONS
-      // ===============================
+      
 
       const interviewQuestions = [];
 
@@ -361,9 +360,9 @@ app.post(
       }
 
 
-      // ===============================
+      
       // STRENGTHS
-      // ===============================
+      
 
       const strengths = [];
 
@@ -422,9 +421,9 @@ app.post(
       }
 
 
-      // ===============================
+      
       // GAP EXPLANATION
-      // ===============================
+      
 
       const gapExplanation =
         missingSkills.map((skill) => {
@@ -463,9 +462,9 @@ app.post(
           };
 
         });
-        // ===============================
+        
 // SAVE ANALYSIS TO DYNAMODB
-// ===============================
+
 
 const analysisId = `${Date.now()}`;
 
@@ -495,9 +494,9 @@ console.log(
 
 
 
-      // ===============================
+      
       // LOG RESULTS
-      // ===============================
+      
 
       console.log(
         "Resume skills:",
@@ -520,9 +519,9 @@ console.log(
       );
 
 
-      // ===============================
+      
       // SEND RESPONSE
-      // ===============================
+      
 
       res.json({
 
@@ -565,9 +564,9 @@ console.log(
 );
 
 
-// ===============================
+
 // START SERVER
-// ===============================
+
 
 app.listen(5000, () => {
 

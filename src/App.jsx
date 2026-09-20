@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="app">
 
-      {/* ================= NAVBAR ================= */}
+      {/*  NAVBAR  */}
 
       <nav className="navbar">
 
@@ -73,7 +73,7 @@ function App() {
       </nav>
 
 
-      {/* ================= HERO ================= */}
+      {/*  HERO  */}
 
       <section className="hero" id="home">
 
@@ -110,7 +110,7 @@ function App() {
       </section>
 
 
-      {/* ================= ANALYZER ================= */}
+      {/*  ANALYZER */}
 
       <section className="analyzer" id="analyzer">
 
@@ -204,7 +204,7 @@ function App() {
       </section>
 
 
-      {/* ================= RESULTS ================= */}
+      {/*  RESULTS  */}
 
       {analysis && (
 
@@ -218,7 +218,7 @@ function App() {
           </h2>
 
 
-          {/* ================= SCORE ================= */}
+          {/*  SCORE */}
 
           <div className="score-card">
 
@@ -248,7 +248,7 @@ function App() {
           </div>
 
 
-          {/* ================= SKILLS ================= */}
+          {/*  SKILLS  */}
 
           <div className="results-grid">
 
@@ -326,7 +326,7 @@ function App() {
           </div>
 
 
-{/* ================= ROADMAP ================= */}
+{/* ROADMAP  */}
 
 <div className="roadmap-card">
 
@@ -421,7 +421,7 @@ function App() {
 
 </div>
 
-          {/* ================= INTERVIEW PREPARATION ================= */}
+          {/*  INTERVIEW PREPARATION  */}
 
           {analysis.interviewQuestions &&
           analysis.interviewQuestions.length > 0 && (
@@ -512,7 +512,7 @@ function App() {
       )}
 
 
-      {/* ================= HOW IT WORKS ================= */}
+      {/*  HOW IT WORKS */}
 
       <section
         className="how"
@@ -615,7 +615,7 @@ function App() {
       </section>
 
 
-      {/* ================= ABOUT ================= */}
+      {/*  ABOUT  */}
 
       <section
         className="about"
@@ -639,7 +639,7 @@ function App() {
       </section>
 
 
-      {/* ================= FOOTER ================= */}
+      {/*  FOOTER  */}
 
       <footer>
 

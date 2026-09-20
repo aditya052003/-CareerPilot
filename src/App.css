@@ -1,6 +1,6 @@
-/* =========================
+/* 
    GLOBAL
-========================= */
+ */
 
 * {
   margin: 0;
@@ -22,9 +22,9 @@ body {
   min-height: 100vh;
 }
 
-/* =========================
+/* 
    NAVBAR
-========================= */
+ */
 
 .navbar {
   height: 72px;
@@ -65,9 +65,9 @@ body {
   color: #2563eb;
 }
 
-/* =========================
+/* 
    HERO
-========================= */
+*/
 
 .hero {
   min-height: 560px;
@@ -140,9 +140,9 @@ body {
   transform: translateY(-1px);
 }
 
-/* =========================
+/* 
    ANALYZER SECTION
-========================= */
+ */
 
 .analyzer {
   padding: 90px 20px;
@@ -167,9 +167,9 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
+/* 
    ANALYZER CARD
-========================= */
+ */
 
 .analyzer-card {
   max-width: 900px;
@@ -193,9 +193,9 @@ body {
   margin-bottom: 13px;
 }
 
-/* =========================
+/* 
    UPLOAD BOX
-========================= */
+ */
 
 .upload-box {
   border: 2px dashed #64748b;
@@ -232,9 +232,9 @@ body {
   font-size: 14px;
 }
 
-/* =========================
+/* 
    TEXTAREA
-========================= */
+ */
 
 textarea {
   width: 100%;
@@ -258,9 +258,9 @@ textarea:focus {
   border-color: #2563eb;
 }
 
-/* =========================
+/* 
    ANALYZE BUTTON
-========================= */
+ */
 
 .analyze-button {
   width: 100%;
@@ -279,9 +279,9 @@ textarea:focus {
   background: #1d4ed8;
 }
 
-/* =========================
+/* 
    RESULTS SECTION
-========================= */
+ */
 
 .results-section {
   max-width: 1100px;
@@ -297,9 +297,9 @@ textarea:focus {
   margin-bottom: 35px;
 }
 
-/* =========================
+/* 
    SCORE
-========================= */
+ */
 
 .score-card {
   text-align: center;
@@ -322,9 +322,9 @@ textarea:focus {
   font-weight: 800;
 }
 
-/* =========================
+/* 
    MATCHED / MISSING SKILLS
-========================= */
+ */
 
 .results-grid {
   display: grid;
@@ -366,9 +366,9 @@ textarea:focus {
   color: #475569;
 }
 
-/* =========================
+/* 
    ROADMAP
-========================= */
+*/
 
 .roadmap-card {
   padding: 30px;
@@ -395,9 +395,9 @@ textarea:focus {
   line-height: 1.5;
 }
 
-/* =========================
+/* 
    HOW IT WORKS
-========================= */
+ */
 
 .how {
   padding: 90px 20px;
@@ -442,9 +442,9 @@ textarea:focus {
   line-height: 1.6;
 }
 
-/* =========================
+/* 
    FOOTER
-========================= */
+ */
 
 footer {
   padding: 45px 20px;
@@ -462,9 +462,9 @@ footer p {
   color: #cbd5e1;
 }
 
-/* =========================
+/* 
    MOBILE
-========================= */
+ */
 
 @media (max-width: 800px) {
 
@@ -505,9 +505,9 @@ footer p {
     font-size: 50px;
   }
 }
-/* =========================
+/* 
    ROADMAP ITEMS
-========================= */
+ */
 
 .roadmap-list {
   display: flex;
@@ -590,9 +590,9 @@ footer p {
   transition: width 1s ease-in-out;
 }
 
-/* ========================================
+/* 
    INTERVIEW PREPARATION
-======================================== */
+ */
 
 .interview-section {
   margin-top: 32px;
